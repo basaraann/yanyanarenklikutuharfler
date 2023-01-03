@@ -1,14 +1,3 @@
-/****************************************************************************
-**					SAKARYA ÜNÝVERSÝTESÝ									*
-**			         BÝLGÝSAYAR VE BÝLÝÞÝM BÝLÝMLERÝ FAKÜLTESÝ				*
-**				    BÝLGÝSAYAR MÜHENDÝSLÝÐÝ BÖLÜMÜ							*
-**				          PROGRAMLAMAYA GÝRÝÞÝ DERSÝ						*
-**																			*
-**				ÖDEV NUMARASI…...1											*
-**				ÖÐRENCÝ ADI...............:Buðra Baþaran					*
-**				ÖÐRENCÝ NUMARASI.:G211210015								*
-**				DERS GRUBU…………:1.sýnýf A grubu								*
-****************************************************************************/
 
 
 #include <iostream>
@@ -23,122 +12,122 @@ int main()
 
 {
 	setlocale(LC_ALL, "Turkish");
-	cout << "81 tane ilden, harf sayýsýna göre illeri rastgele ayýran program:" << endl;
+	cout << "81 tane ilden, harf sayÄ±sÄ±na gÃ¶re illeri rastgele ayÄ±ran program:" << endl;
 	srand(time(NULL));
 
 
-	string randomÝl[15];
+	string randomÄ°l[15];
 
-	string yeniÝl = "";
+	string yeniÄ°l = "";
 
 	int indis[14] = { 0 };
 
-	string iller[81] = { "istanbul","ankara","izmir","adana","adýyaman","afyonkarahisar","aðrý","aksaray","amasya",
+	string iller[81] = { "istanbul","ankara","izmir","adana","adÄ±yaman","afyonkarahisar","aÄŸrÄ±","aksaray","amasya",
 
-		"antalya","ardahan","artvin","aydýn","balýkesir","bartýn","batman","bayburt","bilecik","bingöl","bitlis","bolu",
+		"antalya","ardahan","artvin","aydÄ±n","balÄ±kesir","bartÄ±n","batman","bayburt","bilecik","bingÃ¶l","bitlis","bolu",
 
-		"burdur","bursa","çanakkale","çankýrý","çorum","denizli","diyarbakýr","düzce",
+		"burdur","bursa","Ã§anakkale","Ã§ankÄ±rÄ±","Ã§orum","denizli","diyarbakÄ±r","dÃ¼zce",
 
-		"edirne","elazýð","erzincan","erzurum","eskiþehir","gaziantep","giresun","gümüþhane","hakkari","hatay","ýðdýr","ýsparta","kahramanmaraþ",
+		"edirne","elazÄ±ÄŸ","erzincan","erzurum","eskiÅŸehir","gaziantep","giresun","gÃ¼mÃ¼ÅŸhane","hakkari","hatay","Ä±ÄŸdÄ±r","Ä±sparta","kahramanmaraÅŸ",
 
-		"karabük","karaman","kars","kastamonu","kayseri","kýrýkkale","kýrklareli","kýrþehir","kilis","kocaeli","konya","kütahya","malatya","manisa",
+		"karabÃ¼k","karaman","kars","kastamonu","kayseri","kÄ±rÄ±kkale","kÄ±rklareli","kÄ±rÅŸehir","kilis","kocaeli","konya","kÃ¼tahya","malatya","manisa",
 
-		"mardin","mersin","muðla","muþ","nevþehir","niðde","ordu","osmaniye","rize","sakarya","samsun","siirt","sinop","sivas","þýrnak","tekirdað","tokat"
+		"mardin","mersin","muÄŸla","muÅŸ","nevÅŸehir","niÄŸde","ordu","osmaniye","rize","sakarya","samsun","siirt","sinop","sivas","ÅŸÄ±rnak","tekirdaÄŸ","tokat"
 
-		,"trabzon","tunceli","þanlýurfa","uþak","van","yalova","yozgat","zonguldak" };
+		,"trabzon","tunceli","ÅŸanlÄ±urfa","uÅŸak","van","yalova","yozgat","zonguldak" };
 
-	int enKüçükÝl = iller[0].size();
-
-	for (int i = 0; i < 81; i++)
-
-	{
-
-		if (enKüçükÝl > iller[i].size())
-
-			enKüçükÝl = iller[i].size();
-
-	}
-
-	int enBüyükÝl = iller[0].size();
+	int enKÃ¼Ã§Ã¼kÄ°l = iller[0].size();
 
 	for (int i = 0; i < 81; i++)
 
 	{
 
-		if (enBüyükÝl < iller[i].size())
+		if (enKÃ¼Ã§Ã¼kÄ°l > iller[i].size())
 
-			enBüyükÝl = iller[i].size();
+			enKÃ¼Ã§Ã¼kÄ°l = iller[i].size();
 
 	}
 
-	cout << "en küçük ilin harf sayýsý :" << enKüçükÝl << endl;
+	int enBÃ¼yÃ¼kÄ°l = iller[0].size();
 
-	cout << "en uzun ilin harf sayýsý :" << enBüyükÝl << endl;
+	for (int i = 0; i < 81; i++)
+
+	{
+
+		if (enBÃ¼yÃ¼kÄ°l < iller[i].size())
+
+			enBÃ¼yÃ¼kÄ°l = iller[i].size();
+
+	}
+
+	cout << "en kÃ¼Ã§Ã¼k ilin harf sayÄ±sÄ± :" << enKÃ¼Ã§Ã¼kÄ°l << endl;
+
+	cout << "en uzun ilin harf sayÄ±sÄ± :" << enBÃ¼yÃ¼kÄ°l << endl;
 
 
 	// Min ve Max degerleri arasi kadar doner
 
 
 	int kosul = 0;
-	while (int i = enKüçükÝl <= enBüyükÝl)//örneðin en küçük il 3 harfli ise 3'ten en büyük ilin harf sayýsýna kadar döner
+	while (int i = enKÃ¼Ã§Ã¼kÄ°l <= enBÃ¼yÃ¼kÄ°l)//Ã¶rneÄŸin en kÃ¼Ã§Ã¼k il 3 harfli ise 3'ten en bÃ¼yÃ¼k ilin harf sayÄ±sÄ±na kadar dÃ¶ner
 	{
 
 
 
 
-		cout << enKüçükÝl << " " << "harfli illerden herhangi biri =";
+		cout << enKÃ¼Ã§Ã¼kÄ°l << " " << "harfli illerden herhangi biri =";
 
 
 		kosul = 0;
-		// 100.000 deneme yapilacak, i kadar il arasindan deðerleri eslesenler ile iller arasinda eslesen bulmak icin.
+		// 100.000 deneme yapilacak, i kadar il arasindan deÄŸerleri eslesenler ile iller arasinda eslesen bulmak icin.
 		for (int sayac1 = 0; sayac1 < 100000; sayac1++)
 
 		{
 			//cout << sayac1 << " ";
-			int rastgeleÝlSayisi = 0;
+			int rastgeleÄ°lSayisi = 0;
 			//Rastgele il secer
-			while (rastgeleÝlSayisi < enKüçükÝl)
+			while (rastgeleÄ°lSayisi < enKÃ¼Ã§Ã¼kÄ°l)
 			{
 
 				int randomDeger = rand() % 81;
 
-				randomÝl[rastgeleÝlSayisi] = iller[randomDeger];
+				randomÄ°l[rastgeleÄ°lSayisi] = iller[randomDeger];
 
-				rastgeleÝlSayisi++;
-				//cout << randomÝl[rastgeleÝlSayisi] << endl; // random illeri yazdýrýr
+				rastgeleÄ°lSayisi++;
+				//cout << randomÄ°l[rastgeleÄ°lSayisi] << endl; // random illeri yazdÄ±rÄ±r
 			}
 
-			int enKüçükÝl2 = randomÝl[0].length();
+			int enKÃ¼Ã§Ã¼kÄ°l2 = randomÄ°l[0].length();
 
-			//En kýsa boyutlu ili bulur
-			for (int sayac2 = 0; sayac2 < enKüçükÝl; sayac2++)
+			//En kÄ±sa boyutlu ili bulur
+			for (int sayac2 = 0; sayac2 < enKÃ¼Ã§Ã¼kÄ°l; sayac2++)
 			{
-				if (enKüçükÝl2 > randomÝl[sayac2].length())//en kýsa boyutlu ili bulmak için karþýlaþtýrma yapar
+				if (enKÃ¼Ã§Ã¼kÄ°l2 > randomÄ°l[sayac2].length())//en kÄ±sa boyutlu ili bulmak iÃ§in karÅŸÄ±laÅŸtÄ±rma yapar
 
-					enKüçükÝl2 = randomÝl[sayac2].length();
+					enKÃ¼Ã§Ã¼kÄ°l2 = randomÄ°l[sayac2].length();
 			}
-			//cout<<enKüçükÝl2<<endl;
+			//cout<<enKÃ¼Ã§Ã¼kÄ°l2<<endl;
 			// Bulunan boyut kadar doner ve her ilin harflerini kontrol eder
-			for (int sayac2 = 0;sayac2 < enKüçükÝl2;sayac2++)//örneðin enKüçükÝl2=3 ise k=0,1,2 olur ve 3 tane yazdýrýr
+			for (int sayac2 = 0;sayac2 < enKÃ¼Ã§Ã¼kÄ°l2;sayac2++)//Ã¶rneÄŸin enKÃ¼Ã§Ã¼kÄ°l2=3 ise k=0,1,2 olur ve 3 tane yazdÄ±rÄ±r
 			{
-				yeniÝl = "";
+				yeniÄ°l = "";
 
 				// Illerin harflere karsilik gelen karakterleri toplar
-				for (int x = 0; x < enKüçükÝl;x++)
+				for (int x = 0; x < enKÃ¼Ã§Ã¼kÄ°l;x++)
 
-					yeniÝl = yeniÝl + randomÝl[x].at(sayac2);
+					yeniÄ°l = yeniÄ°l + randomÄ°l[x].at(sayac2);
 
 				// konsola yazar
-				//cout << yeniÝl << endl;
+				//cout << yeniÄ°l << endl;
 
-				// Cýkan sonucla illerinkini karsilastirir
+				// CÄ±kan sonucla illerinkini karsilastirir
 				for (int sayac3 = 0; sayac3 < 81; sayac3++)
 
 				{
 					if (true) {
-						if (iller[sayac3] == yeniÝl)
+						if (iller[sayac3] == yeniÄ°l)
 						{
-							cout << yeniÝl << " ili bulundu" << endl;
+							cout << yeniÄ°l << " ili bulundu" << endl;
 
 							kosul = 1;
 						}
@@ -156,9 +145,9 @@ int main()
 
 				break;
 		}
-		enKüçükÝl++;
-		if (kosul == 0 && i != enKüçükÝl)
-			cout << "bulunamadý" << endl;
+		enKÃ¼Ã§Ã¼kÄ°l++;
+		if (kosul == 0 && i != enKÃ¼Ã§Ã¼kÄ°l)
+			cout << "bulunamadÄ±" << endl;
 	}
 	return 0;
 	system("pause");
